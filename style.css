@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+kbd {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: grey url(./bg_min.jpg) center center no-repeat;
+}
+
+main {
+  display: inline-block;
+  padding: 0 30px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,.3);
+}
+
+.keys-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.keys-row:nth-child(2) {
+  margin-left: -20px;
+}
+
+.keys-row:nth-child(3) {
+  margin-left: -128px;
+}
+
+.key {
+  position: relative;
+  width: 71px;
+  height: 69px;
+  margin: 8px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: keyboard, "Arial Rounded", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.key > img {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+}
+
+.key > button {
+  display: none;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 8px;
+}
+
+.key > button:hover {
+  cursor: pointer;
+}
+
+.key:hover > button {
+  display: inline-block;
+}
+
+.key > kbd {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.key > kbd:hover {
+  cursor: default;
+}
